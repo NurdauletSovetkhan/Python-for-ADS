@@ -20,16 +20,33 @@ st.set_page_config(page_title="Disjoint Set Visualizer", layout="wide")
 st.title("📚 Disjoint Set Data Structures")
 tab1, tab2 = st.tabs(["📘 Theory", "⚙️ Benchmarks"])
 
-
 with tab1:
     st.header("📘 Theory and Tasks")
 
     st.markdown("""
-    Disjoint Set (или Union-Find) — структура данных для работы с непересекающимися множествами.
-    Позволяет эффективно объединять множества и находить их корни.
-    Используется в задачах на графы, например, для нахождения минимального остовного дерева (MST).
-                Ссылка на презентацию: https://docs.google.com/presentation/d/12VCENn-07ZMsSt0ZlJj_YpXNWtR3aEeNlLp6KD0PGf8/edit#slide=id.g20e53a1f10d_0_135
+    ### 💡 Disjoint Set (Union-Find)
+
+    A **Disjoint Set** is a data structure that keeps track of a partition of elements into **non-overlapping subsets**.  
+    It is especially useful for determining whether two elements belong to the same subset.
+
+    #### Core Operations:
+    - **Find(x)** — returns the representative (root) of the subset containing `x`.
+    - **Union(x, y)** — merges the subsets containing `x` and `y`.
+
+    #### Optimizations:
+    - **Path Compression** — flattens the tree structure during `find` calls to speed up future accesses.
+    - **Union by Rank / Size** — always attaches the smaller tree under the root of the larger one.
+
+    #### Applications:
+    - Building **Minimum Spanning Trees (MST)** (e.g., Kruskal's algorithm)
+    - **Connectivity** checking in graphs
+    - **Clustering** and grouping problems
+    - Grouping systems (e.g., social networks)
+
+    👉 [Open presentation](https://docs.google.com/presentation/d/12VCENn-07ZMsSt0ZlJj_YpXNWtR3aEeNlLp6KD0PGf8/edit#slide=id.g20e53a1f10d_0_135)
     """)
+
+
         
     st.subheader("🧠 Task #1 — Quick Find")
     st.markdown("""
