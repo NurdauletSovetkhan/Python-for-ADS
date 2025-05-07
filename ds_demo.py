@@ -50,63 +50,71 @@ with tab1:
         
     st.subheader("🧠 Task #1 — Quick Find")
     st.markdown("""
-    Quick Find — простая реализация Disjoint Set, где каждый элемент хранит свой ID-компоненты.  
-    - **Union:** O(N)  
-    - **Find:** O(1)  
+    **Quick Find** is the simplest implementation of Disjoint Set.  
+    Each element stores an ID that represents its connected component.
+
+    - **Find:** O(1) — Direct lookup of component ID.  
+    - **Union:** O(N) — May need to update all elements with the same component ID.  
     - **Space:** O(N)
     """)
     st.code("""
     class QuickFind:
         def __init__(self, n):
-            self.id = list(range(n))
+            self.id = list(range(n))  # Each node starts in its own component
 
         def find(self, x):
-            return self.id[x]
+            return self.id[x]  # Just return the component ID
 
         def union(self, x, y):
             pid = self.id[x]
             qid = self.id[y]
             for i in range(len(self.id)):
                 if self.id[i] == pid:
-                    self.id[i] = qid
+                    self.id[i] = qid  # Update all elements with old ID to new one
     """)
 
     st.subheader("🧠 Task #2 — Quick Union")
     st.markdown("""
-    Quick Union — улучшение, где хранятся ссылки на родителя.  
-    - **Union:** O(N)  
-    - **Find:** O(N)  
+    **Quick Union** improves on Quick Find by representing each set as a tree.  
+    Each node stores a reference to its parent.
+
+    - **Find:** O(N) — Can be slow if the tree is tall.  
+    - **Union:** O(N) — Depends on `find`.  
     - **Space:** O(N)  
-    **Разница с Quick Find:** union быстрее, но find медленнее.
+
+    **Difference from Quick Find:**  
+    `union` is faster in some cases, but `find` becomes slower due to tree traversal.
     """)
     st.code("""
     class QuickUnion:
         def __init__(self, n):
-            self.parent = list(range(n))
+            self.parent = list(range(n))  # Each node is its own root initially
 
         def find(self, x):
-            while x != self.parent[x]:
+            while x != self.parent[x]:  # Go up until we find the root
                 x = self.parent[x]
             return x
 
         def union(self, x, y):
             root_x = self.find(x)
             root_y = self.find(y)
-            self.parent[root_x] = root_y
+            self.parent[root_x] = root_y  # Attach one tree under another
     """)
+
 
     st.subheader("🧠 Task #3 — Union by Rank")
     st.markdown("""
-    Union by Rank — к Quick Union добавляем высоту (ранг) дерева, чтобы соединять меньшие по высоте под большими.  
-    - **Union:** O(log N)  
-    - **Find:** O(log N)
-        """)
-        
+    **Union by Rank** optimizes Quick Union by keeping trees balanced.  
+    It tracks the depth (rank) of each tree and always attaches the shorter tree under the taller one.
+
+    - **Find:** O(log N) — Height of the tree is limited.  
+    - **Union:** O(log N)
+    """)
     st.code("""
     class UnionByRank:
         def __init__(self, n):
             self.parent = list(range(n))
-            self.rank = [0] * n
+            self.rank = [0] * n  # Rank represents tree depth
 
         def find(self, x):
             while x != self.parent[x]:
@@ -117,7 +125,7 @@ with tab1:
             root_x = self.find(x)
             root_y = self.find(y)
             if root_x == root_y:
-                return
+                return  # Already connected
             if self.rank[root_x] < self.rank[root_y]:
                 self.parent[root_x] = root_y
             elif self.rank[root_x] > self.rank[root_y]:
@@ -125,14 +133,16 @@ with tab1:
             else:
                 self.parent[root_y] = root_x
                 self.rank[root_x] += 1
-            """)
+    """)
 
     st.subheader("🧠 Task #4 — Path Compression")
     st.markdown("""
-    Path Compression ускоряет find, делая все узлы по пути напрямую связанными с корнем.  
-    - **Union:** O(log N)  
-    - **Find:** O(log N) → O(α(N)) в амортизированном.
-        """)
+    **Path Compression** improves the `find` operation by flattening the tree.  
+    Every time we call `find`, we make each node point directly to the root.
+
+    - **Find:** O(log N) → O(α(N)) amortized — very close to constant.  
+    - **Union:** O(N) — Without rank, union can still be costly.
+    """)
     st.code("""
     class PathCompression:
         def __init__(self, n):
@@ -140,7 +150,7 @@ with tab1:
 
         def find(self, x):
             if x != self.parent[x]:
-                self.parent[x] = self.find(self.parent[x])
+                self.parent[x] = self.find(self.parent[x])  # Flatten the path
             return self.parent[x]
 
         def union(self, x, y):
@@ -148,14 +158,18 @@ with tab1:
             root_y = self.find(y)
             if root_x != root_y:
                 self.parent[root_x] = root_y
-            """)
+    """)
 
     st.subheader("🧠 Task #5 — Union by Rank + Path Compression")
     st.markdown("""
-    Лучшая реализация Disjoint Set: два подхода вместе.  
-    - **Union & Find:** O(α(N)) — почти константа  
+    **Union by Rank + Path Compression** is the most efficient version of Disjoint Set.  
+    It combines both optimizations to achieve nearly constant time for both operations.
+
+    - **Find & Union:** O(α(N)) — In practice, almost O(1).  
     - **Space:** O(N)
-        """)
+
+    This is what most competitive programmers and real-world systems use.
+    """)
     st.code("""
     class UnionByRankWithPathCompression:
         def __init__(self, n):
@@ -164,7 +178,7 @@ with tab1:
 
         def find(self, x):
             if x != self.parent[x]:
-                self.parent[x] = self.find(self.parent[x])
+                self.parent[x] = self.find(self.parent[x])  # Path compression
             return self.parent[x]
 
         def union(self, x, y):
@@ -179,7 +193,8 @@ with tab1:
             else:
                 self.parent[root_y] = root_x
                 self.rank[root_x] += 1
-            """)
+    """)
+
     
 with tab2:
     if "n" not in st.session_state:
@@ -192,7 +207,7 @@ with tab2:
 
     operations = [(random.randint(0, n - 1), random.randint(0, n - 1)) for _ in range(runs)]
 
-    if st.button("🎲 Случайные параметры"):
+    if st.button("🎲 Randomize Values"):
         st.session_state.n = random.randint(10, 100_000)
         st.session_state.runs = random.randint(10, 100_000)
         st.rerun()
@@ -203,15 +218,31 @@ with tab2:
     st.session_state.n = n
     st.session_state.runs = runs
 
-    st.subheader("📊 Теоретическая сложность (Big-O)")
+    st.subheader("📊 Theoretical difficulty (Big-O)")
 
     st.markdown("""
-    - **Quick Union**: O(N) — find и union в худшем случае.
-    - **Union by Rank**: O(log N) — дерево сбалансировано.
-    - **Union by Rank + Path Compression**: O(α(N)) — почти O(1) в реальности.
+    - **Quick Find**:  
+      - `find`: O(1) — direct access to the component ID.  
+      - `union`: O(N) — need to update IDs for all connected elements.
+      
+    - **Quick Union**:  
+      - `find`: O(N) — may traverse a tall tree.  
+      - `union`: O(N) — depends on `find` time.
+
+    - **Union by Rank**:  
+      - `find`: O(log N) — due to tree balancing.  
+      - `union`: O(log N) — trees stay balanced.
+
+    - **Path Compression Only**:  
+      - `find`: O(log N) → O(α(N)) amortized — flattens the tree.  
+      - `union`: O(N) — no balancing.
+
+    - **Union by Rank + Path Compression**:  
+      - `find` and `union`: O(α(N)) — nearly constant time in practice.
     """)
 
-    if st.button("🚀 Старт замера"):
+
+    if st.button("🔄 Run Benchmark"):
         times = {}
 
         qf = QuickFind(n)
@@ -244,16 +275,16 @@ with tab2:
             ubrpc.union(x, y)
         times["Rank + Path Compression"] = time.time() - start
 
-        st.subheader("⏱ Время выполнения")
-        st.write(f"**Параметры:** {n} элементов, {runs} операций")
+        st.subheader("⏱ Time Benchmark")
+        st.write(f"**Parametress:** {n} elements, {runs} operations")
 
         for name, t in times.items():
-            st.write(f"**{name}**: {t:.5f} сек")
+            st.write(f"**{name}**: {t:.5f} seconds")
 
         fig, ax = plt.subplots()
         ax.bar(times.keys(), times.values(), color=["blue", "red", "orange", "purple", "green"])
-        ax.set_ylabel("Время (сек)")
-        ax.set_title("Сравнение производительности Union-Find")
+        ax.set_ylabel("Time (seconds)")
+        ax.set_title("Comparasion of Union-Find")
         plt.xticks(rotation=15)
         st.pyplot(fig)
 
