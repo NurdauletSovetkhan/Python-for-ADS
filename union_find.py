@@ -51,6 +51,11 @@ class QuickUnion:
         root_y = self.find(y)
         if root_x != root_y:
             self.parent[root_y] = root_x
+            # parent = [0, 1, 2, 3, 4]
+            # union(0, 1)
+            # -> parent = [1, 1, 2, 3, 4]
+            # union(1, 2)
+            # -> parent = [1, 2, 2, 3, 4]
 
 # QuickUnion:
 # parent = [0, 1, 2, 3, 4]
@@ -91,6 +96,9 @@ class UnionByRank:
             # If ranks are equal, choose one as root and increase its rank
             self.parent[root_y] = root_x
             self.rank[root_x] += 1
+            # 0 - 1     2 - 3
+            # rank[0] = 1, rank[2] = 1
+            # union(0, 2) → оба ранка равны → любой под другой, ранк увеличится
 
 # UnionByRank:
 # 0 - 1     2 - 3
@@ -160,9 +168,8 @@ class UnionByRankWithPathCompression:
 # - Combines both rank and path compression for optimal performance.
 # - `find` and `union` are O(α(N)) in amortized time.
 # - Space complexity is O(N) because it stores the parent and rank arrays.
-
-# 1. Quick Find → прост, но тормозной
-# 2. Quick Union → лучше, но может застревать на find
-# 3. Union by Rank → сбалансированные деревья
-# 4. Path Compression → супер быстрый find
+# 1. Quick Find → simple but slow
+# 2. Quick Union → better, but find can be slow
+# 3. Union by Rank → balanced trees
+# 4. Path Compression → super fast find
 # 5. Rank + Compression → must have

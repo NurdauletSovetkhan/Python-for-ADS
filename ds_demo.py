@@ -60,17 +60,27 @@ with tab1:
     st.code("""
     class QuickFind:
         def __init__(self, n):
-            self.id = list(range(n))  # Each node starts in its own component
+            # Initialize the array where each element is its own component ID
+            self.id = list(range(n))  # id[i] = component id of i
 
         def find(self, x):
-            return self.id[x]  # Just return the component ID
+            # Return the component ID of element x
+            return self.id[x]
 
         def union(self, x, y):
-            pid = self.id[x]
-            qid = self.id[y]
-            for i in range(len(self.id)):
-                if self.id[i] == pid:
-                    self.id[i] = qid  # Update all elements with old ID to new one
+            # Merge the components of x and y
+            id_x = self.id[x]
+            id_y = self.id[y]
+            if id_x != id_y:
+                # Update all elements with the same component ID as y to have the component ID of x
+                for i in range(len(self.id)):
+                    if self.id[i] == id_y:
+                        self.id[i] = id_x
+                        # id = [0, 1, 2, 3, 4]
+                        # union(0, 1)
+                        # -> id = [1, 1, 2, 3, 4]
+                        # union(1, 2)
+                        # -> id = [2, 2, 2, 3, 4]
     """)
 
     st.subheader("Task #2 — Quick Union")
@@ -88,17 +98,26 @@ with tab1:
     st.code("""
     class QuickUnion:
         def __init__(self, n):
-            self.parent = list(range(n))  # Each node is its own root initially
+            # Initialize the parent array where each element is its own root
+            self.parent = list(range(n))  # каждый элемент - корень сам себе
 
         def find(self, x):
-            while x != self.parent[x]:  # Go up until we find the root
+            # Traverse up the tree to find the root of x
+            while x != self.parent[x]:
                 x = self.parent[x]
             return x
 
         def union(self, x, y):
+            # Merge the trees of x and y by connecting their roots
             root_x = self.find(x)
             root_y = self.find(y)
-            self.parent[root_x] = root_y  # Attach one tree under another
+            if root_x != root_y:
+                self.parent[root_y] = root_x
+                # parent = [0, 1, 2, 3, 4]
+                # union(0, 1)
+                # -> parent = [1, 1, 2, 3, 4]
+                # union(1, 2)
+                # -> parent = [1, 2, 2, 3, 4]
     """)
 
 
@@ -113,26 +132,35 @@ with tab1:
     st.code("""
     class UnionByRank:
         def __init__(self, n):
+            # Initialize the parent array and rank array
             self.parent = list(range(n))
-            self.rank = [0] * n  # Rank represents tree depth
+            self.rank = [0] * n  # rank represents the height of the tree
 
         def find(self, x):
+            # Traverse up the tree to find the root of x
             while x != self.parent[x]:
                 x = self.parent[x]
             return x
 
         def union(self, x, y):
+            # Merge the trees of x and y based on their rank
             root_x = self.find(x)
             root_y = self.find(y)
             if root_x == root_y:
-                return  # Already connected
+                return
+
+            # Attach the smaller tree under the larger tree
             if self.rank[root_x] < self.rank[root_y]:
                 self.parent[root_x] = root_y
             elif self.rank[root_x] > self.rank[root_y]:
                 self.parent[root_y] = root_x
             else:
+                # If ranks are equal, choose one as root and increase its rank
                 self.parent[root_y] = root_x
                 self.rank[root_x] += 1
+                # 0 - 1     2 - 3
+                # rank[0] = 1, rank[2] = 1
+                # union(0, 2) → оба ранка равны → любой под другой, ранк увеличится
     """)
 
     st.subheader("Task #4 — Path Compression")
@@ -144,20 +172,23 @@ with tab1:
     - **Union:** O(N) — Without rank, union can still be costly.
     """)
     st.code("""
-    class PathCompression:
+    class PathCompressionOnly:
         def __init__(self, n):
+            # Initialize the parent array
             self.parent = list(range(n))
 
         def find(self, x):
-            if x != self.parent[x]:
-                self.parent[x] = self.find(self.parent[x])  # Flatten the path
+            # Find the root of x and compress the path by pointing directly to the root
+            if self.parent[x] != x:
+                self.parent[x] = self.find(self.parent[x])  # сжатие пути
             return self.parent[x]
 
         def union(self, x, y):
+            # Merge the trees of x and y
             root_x = self.find(x)
             root_y = self.find(y)
             if root_x != root_y:
-                self.parent[root_x] = root_y
+                self.parent[root_y] = root_x
     """)
 
     st.subheader("Task #5 — Union by Rank + Path Compression")
@@ -173,27 +204,43 @@ with tab1:
     st.code("""
     class UnionByRankWithPathCompression:
         def __init__(self, n):
+            # Initialize the parent array and rank array
             self.parent = list(range(n))
             self.rank = [0] * n
 
         def find(self, x):
-            if x != self.parent[x]:
-                self.parent[x] = self.find(self.parent[x])  # Path compression
+            # Find the root of x and compress the path by pointing directly to the root
+            if self.parent[x] != x:
+                self.parent[x] = self.find(self.parent[x])  # сжатие пути
             return self.parent[x]
 
         def union(self, x, y):
+            # Merge the trees of x and y based on their rank
             root_x = self.find(x)
             root_y = self.find(y)
             if root_x == root_y:
                 return
+
+            # Attach the smaller tree under the larger tree
             if self.rank[root_x] < self.rank[root_y]:
                 self.parent[root_x] = root_y
             elif self.rank[root_x] > self.rank[root_y]:
                 self.parent[root_y] = root_x
             else:
+                # If ranks are equal, choose one as root and increase its rank
                 self.parent[root_y] = root_x
                 self.rank[root_x] += 1
+
     """)
+    st.subheader("Diffirence between all implementations")
+    st.markdown("""
+    # 1. Quick Find → simple but slow
+    # 2. Quick Union → better, but find can be slow
+    # 3. Union by Rank → balanced trees
+    # 4. Path Compression → super fast find
+    # 5. Rank + Compression → must have
+    """)
+
 
     
 with tab2:
