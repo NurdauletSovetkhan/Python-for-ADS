@@ -239,14 +239,43 @@ with tab1:
     3. Union by Rank → balanced trees
     4. Path Compression → super fast find
     5. Rank + Compression → must have
-                | Метод                | Представление                  | Идея                                          |
-| -------------------- | ------------------------------ | --------------------------------------------- |
-| **Quick Find**       | `id[]` — список компонент      | Всё просто, но `union` дорогой                |
-| **Quick Union**      | Дерево: `child → parent`       | Быстрый `union`, но дерево может быть длинным |
-| **Weighted Union**   | Дерево + размер                | Присоединяем меньшее к большему               |
-| **Path Compression** | Срезаем дерево во время `find` | Быстрое `find`, плоские деревья               |
-| **WQU + PC**         | Всё лучшее вместе              | ⚡ Почти O(1), юзай в CP и реальных задачах    |
+                
+    # Disjoint Set of implementation
 
+## Quick Find
+- View: id[] — a list where each element contains the ID of its component.
+- The idea: If `id[x] == id[y]`, then x and y are in the same component.
+- Find: O(1) — just return id[x].
+- Union: O(N) — you need to go through the entire array and replace the old ids with new ones.
+- Features: Very simple, but inefficient with a large number of union operations.
+
+## Quick Union
+- Representation: parent[] — a tree, each element points to its parent.
+- The idea: Trees, each root is a representative of a component.
+- Find: O(N) — climb the tree to the root.
+- Union: O(N) — depends on find.
+- Features: The tree can be very tall => Find becomes slow.
+
+## Weighted Quick Union (Union by Size)
+- Representation: parent[] + size[] — tree + size of subtrees.
+- The idea: We always attach a smaller tree to a larger one.
+- Find: O(log N)
+- Union: O(log N)
+- Features: Helps you avoid tall trees, faster than regular Quick Union.
+
+## Path Compression
+- Representation: parent[] — tree.
+- The idea: During the `find`, we make all nodes on the path point directly to the root.
+- Find: O(log N) → almost O(1) (amortized)
+- Union: O(log N)
+- Features: the tree becomes almost flat — speeds up further searches.
+
+## Union by Rank + Path Compression (WQU + PC)
+- Representation: parent[] + rank[] — tree + tree depth.
+- The idea: First we connect by rank (or size), and during the `find` we compress the paths.
+- Find: O(α(N)) is almost constant (very fast, even for large N).
+- Union: O(α(N))
+- Features: the fastest and most efficient implementation. It is used in real-world tasks and contests.
     """)
 
 
