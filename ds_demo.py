@@ -48,7 +48,7 @@ with tab1:
 
 
         
-    st.subheader("🧠 Task #1 — Quick Find")
+    st.subheader("Task #1 — Quick Find")
     st.markdown("""
     **Quick Find** is the simplest implementation of Disjoint Set.  
     Each element stores an ID that represents its connected component.
@@ -73,7 +73,7 @@ with tab1:
                     self.id[i] = qid  # Update all elements with old ID to new one
     """)
 
-    st.subheader("🧠 Task #2 — Quick Union")
+    st.subheader("Task #2 — Quick Union")
     st.markdown("""
     **Quick Union** improves on Quick Find by representing each set as a tree.  
     Each node stores a reference to its parent.
@@ -102,7 +102,7 @@ with tab1:
     """)
 
 
-    st.subheader("🧠 Task #3 — Union by Rank")
+    st.subheader("Task #3 — Union by Rank")
     st.markdown("""
     **Union by Rank** optimizes Quick Union by keeping trees balanced.  
     It tracks the depth (rank) of each tree and always attaches the shorter tree under the taller one.
@@ -135,7 +135,7 @@ with tab1:
                 self.rank[root_x] += 1
     """)
 
-    st.subheader("🧠 Task #4 — Path Compression")
+    st.subheader("Task #4 — Path Compression")
     st.markdown("""
     **Path Compression** improves the `find` operation by flattening the tree.  
     Every time we call `find`, we make each node point directly to the root.
@@ -160,7 +160,7 @@ with tab1:
                 self.parent[root_x] = root_y
     """)
 
-    st.subheader("🧠 Task #5 — Union by Rank + Path Compression")
+    st.subheader("Task #5 — Union by Rank + Path Compression")
     st.markdown("""
     **Union by Rank + Path Compression** is the most efficient version of Disjoint Set.  
     It combines both optimizations to achieve nearly constant time for both operations.
