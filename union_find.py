@@ -18,6 +18,12 @@ class QuickFind:
                     self.id[i] = id_x
 
 # QuickFind:
+# id = [0, 1, 2, 3, 4]
+# union(0, 1)
+# -> id = [1, 1, 2, 3, 4]
+# union(1, 2)
+# -> id = [2, 2, 2, 3, 4]
+
 # - `find` is O(1) because it directly accesses the array.
 # - `union` is O(N) because it iterates through the entire array to update component IDs.
 # - Space complexity is O(N) because it stores an array of size N.
@@ -42,6 +48,11 @@ class QuickUnion:
             self.parent[root_y] = root_x
 
 # QuickUnion:
+# parent = [0, 1, 2, 3, 4]
+# union(0, 1)
+# -> parent = [1, 1, 2, 3, 4]
+# union(1, 2)
+# -> parent = [1, 2, 2, 3, 4]
 # - `find` is O(N) in the worst case because the tree can become very deep.
 # - `union` is O(N) because it depends on `find`.
 # - Space complexity is O(N) because it stores the parent array.
@@ -77,6 +88,9 @@ class UnionByRank:
             self.rank[root_x] += 1
 
 # UnionByRank:
+# 0 - 1     2 - 3
+# rank[0] = 1, rank[2] = 1
+# union(0, 2) → оба ранка равны → любой под другой, ранк увеличится
 # - `find` is O(log N) because the tree is balanced.
 # - `union` is O(log N) because it depends on `find`.
 # - Space complexity is O(N) because it stores the parent and rank arrays.
@@ -101,6 +115,8 @@ class PathCompressionOnly:
             self.parent[root_y] = root_x
 
 # PathCompressionOnly:
+# До: 0 → 1 → 2 → 3
+# После find(0) → 0 → 3, 1 → 3, 2 → 3
 # - `find` is O(α(N)) in amortized time, where α is the inverse Ackermann function.
 # - `union` is O(α(N)) because it depends on `find`.
 # - Space complexity is O(N) because it stores the parent array.
@@ -139,3 +155,9 @@ class UnionByRankWithPathCompression:
 # - Combines both rank and path compression for optimal performance.
 # - `find` and `union` are O(α(N)) in amortized time.
 # - Space complexity is O(N) because it stores the parent and rank arrays.
+
+# 1. Quick Find → прост, но тормозной
+# 2. Quick Union → лучше, но может застревать на find
+# 3. Union by Rank → сбалансированные деревья
+# 4. Path Compression → супер быстрый find
+# 5. Rank + Compression → must have
