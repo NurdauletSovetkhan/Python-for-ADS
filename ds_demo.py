@@ -234,11 +234,11 @@ with tab1:
     """)
     st.subheader("Diffirence between all implementations")
     st.markdown("""
-    # 1. Quick Find → simple but slow
-    # 2. Quick Union → better, but find can be slow
-    # 3. Union by Rank → balanced trees
-    # 4. Path Compression → super fast find
-    # 5. Rank + Compression → must have
+    1. Quick Find → simple but slow
+    2. Quick Union → better, but find can be slow
+    3. Union by Rank → balanced trees
+    4. Path Compression → super fast find
+    5. Rank + Compression → must have
     """)
 
 
