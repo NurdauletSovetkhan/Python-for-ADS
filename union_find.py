@@ -16,6 +16,11 @@ class QuickFind:
             for i in range(len(self.id)):
                 if self.id[i] == id_y:
                     self.id[i] = id_x
+                    # id = [0, 1, 2, 3, 4]
+                    # union(0, 1)
+                    # -> id = [1, 1, 2, 3, 4]
+                    # union(1, 2)
+                    # -> id = [2, 2, 2, 3, 4]
 
 # QuickFind:
 # id = [0, 1, 2, 3, 4]
