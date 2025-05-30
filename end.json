@@ -1,0 +1,493 @@
+[
+  {
+    "id": 201,
+    "question": "In a stack, if a user tries to remove an element from empty stack it is called",
+    "options": ["Empty collection", "Underflow", "Garbage Collection", "Overflow"],
+    "answer": "Underflow"
+  },
+  {
+    "id": 202,
+    "question": "Which sorting algorithm has the same average and worst-case time bounds (in Big-O) as heap sort?",
+    "options": ["Shell sort", "Merge sort", "Quick sort", "Insertion sort"],
+    "answer": "Merge sort"
+  },
+  {
+    "id": 203,
+    "question": "In which of the following traversals is the node processed before the recursive calls to the children complete?",
+    "options": ["Preorder", "postorder", "Inorder", "Level order"],
+    "answer": "Preorder"
+  },
+  {
+    "id": 204,
+    "question": "If an element in a binary heap is stored in position i and the root is at position 1, then where is the parent stored?",
+    "options": ["i/2", "1+I/2", "2i", "2i+1"],
+    "answer": "i/2"
+  },
+  {
+    "id": 205,
+    "question": "Which of the following is the correct time complexity of building a max heap from an unsorted array of n elements?",
+    "options": ["O(n log n)", "O(log n)", "O(n²)", "O(n)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 206,
+    "question": "What is the average-case number of comparisons performed by Quick Sort on an array of size n?",
+    "options": ["O(n)", "O(n log n)", "O(1)", "O(log n)"],
+    "answer": "O(n log n)"
+  },
+  {
+    "id": 207,
+    "question": "If the hash function is poorly designed, which of the following is the most likely result?",
+    "options": ["Increased hash collisions", "Reduced space usage", "Faster search times", "Improved key distribution"],
+    "answer": "Increased hash collisions"
+  },
+  {
+    "id": 208,
+    "question": "Which of the following does the binary heap implement?",
+    "options": ["hash table", "binary search tree", "priority queue", "queue"],
+    "answer": "priority queue"
+  },
+  {
+    "id": 209,
+    "question": "If you run Heap Sort on an array of size n, how many times is the heapify function potentially called in total (worst case)?",
+    "options": ["log n", "n²", "n log n", "n"],
+    "answer": "n log n"
+  },
+  {
+    "id": 210,
+    "question": "Which of (a) to (d) is false about the binary search?",
+    "options": [
+      "Successful searches take logarithmic time on average",
+      "The input array must be sorted",
+      "All of the given is true",
+      "Unsuccessful searches take logarithmic time on average"
+    ],
+    "answer": "All of the given is true"
+  },
+  {
+    "id": 211,
+    "question": "The complexity of Binary search algorithm is",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(n2)"],
+    "answer": "O(log n)"
+  },
+  {
+    "id": 212,
+    "question": "Every node in a (min) binary heap",
+    "options": ["has 2 children", "Has a smaller left child Than right child", "Is no smaller than its children", "Is no larger than its children"],
+    "answer": "Is no larger than its children"
+  },
+  {
+    "id": 213,
+    "question": "Which of the following best describes the space complexity of in-place Quick Sort (excluding recursive stack)?",
+    "options": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 214,
+    "question": "An algorithm takes 6 seconds to solve a problem of size 100 and ten minutes to solve a problem of size 1000. What is the likely running time of the algorithm?",
+    "options": ["Linear", "Constant", "Quadratic", "Cubic"],
+    "answer": "Cubic"
+  },
+  {
+    "id": 215,
+    "question": "What is the parent for a node ‘w’ of a complete binary tree in an array representation when w is not 0?",
+    "options": ["w-1/2", "w/2", "floor((w - 1) / 2)", "ceil(w-1/2)"],
+    "answer": "floor((w - 1) / 2)"
+  },
+  {
+    "id": 216,
+    "question": "Jobs sent to a printer are generally placed on a",
+    "options": ["binary search tree", "queue", "priority queue", "hash table"],
+    "answer": "queue"
+  },
+  {
+    "id": 217,
+    "question": "What is the worst-case time complexity of Quick Sort when using the last element as the pivot for an already sorted array?",
+    "options": ["O(n)", "O(n log n)", "O(n²)", "O(log n)"],
+    "answer": "O(n²)"
+  },
+  {
+    "id": 218,
+    "question": "What is the main reason Merge Sort performs consistently across all types of input (e.g., sorted, reverse-sorted, random)?",
+    "options": ["It sorts using random pivot selection", "It divides the data and processes each half independently of input order", "It uses a heap to manage elements", "It avoids recursion"],
+    "answer": "It divides the data and processes each half independently of input order"
+  },
+  {
+    "id": 219,
+    "question": "What is the advantage of heap sort over quicksort in worst-case scenarios?",
+    "options": ["Heap sort has a guaranteed O(n log n) performance", "Heap sort is recursive", "Heap sort is more cache friendly", "Heap sort is faster on average"],
+    "answer": "Heap sort has a guaranteed O(n log n) performance"
+  },
+  {
+    "id": 220,
+    "question": "In the Merge Sort algorithm, what causes the space complexity to be O(n)?",
+    "options": ["Recursive function calls", "Sorting large elements", "Temporary arrays used during merging", "Use of in-place swaps"],
+    "answer": "Temporary arrays used during merging"
+  },
+  {
+    "id": 221,
+    "question": "How many children does a binary tree have?",
+    "options": ["any number of children", "2", "0 or 1 or 2", "0 or 1"],
+    "answer": "0 or 1 or 2"
+  },
+  {
+    "id": 222,
+    "question": "What is the main drawback of using linked lists for collision resolution in hash tables?",
+    "options": ["Inefficient deletion operation", "Inability to handle duplicate keys", "Increased memory usage due to pointers", "Poor hashing of integer keys"],
+    "answer": "Increased memory usage due to pointers"
+  },
+  {
+    "id": 223,
+    "question": "How do you remove an element from the top of a stack?",
+    "options": ["Remove by index", "Delete from array", "Dequeue operation", "Pop operation"],
+    "answer": "Pop operation"
+  },
+  {
+    "id": 224,
+    "question": "What are the children for node ‘w’ of a complete-binary tree in an array representation?",
+    "options": ["w+1/2 and w/2", "w-1/2 and w+1/2", "2+w and 2-w", "2w and 2w+1"],
+    "answer": "2w and 2w+1"
+  },
+  {
+    "id": 225,
+    "question": "Why is Merge Sort preferred over Quick Sort in external sorting (e.g., with large datasets on disk)?",
+    "options": ["Merge Sort uses no extra space", "Merge Sort is faster on average", "Merge Sort accesses elements in a sequential manner", "Quick Sort handles external data better"],
+    "answer": "Merge Sort accesses elements in a sequential manner"
+  },
+  {
+    "id": 226,
+    "question": "When implementing a hash table with open addressing, what condition can lead to infinite loops during insertion?",
+    "options": ["Use of power-of-two table sizes", "Load factor above 0.5", "Hash function returning same index for all keys", "Non-prime modulus in hash function"],
+    "answer": "Hash function returning same index for all keys"
+  },
+  {
+    "id": 227,
+    "question": "The time factor when determining the efficiency of algorithm is measured by",
+    "options": ["Counting microseconds", "Counting the number of key operations", "Counting the kilobytes of algorithm", "Counting the number of statements"],
+    "answer": "Counting the number of key operations"
+  },
+  {
+    "id": 228,
+    "question": "During the merge operation in Merge Sort, how many comparisons are required to merge two sorted subarrays of total size n in the worst case?",
+    "options": ["log n", "1", "n", "n^2"],
+    "answer": "n"
+  },
+  {
+    "id": 229,
+    "question": "Which of the following is TRUE about Heap Sort in terms of space complexity and stability?",
+    "options": ["O(1) space and stable", "O(1) space and not stable", "O(n) space and stable", "O(n log n) space and not stable"],
+    "answer": "O(1) space and not stable"
+  },
+  {
+    "id": 230,
+    "question": "Which of the following statements is TRUE regarding the process of heapifying a subtree rooted at index i in an array?",
+    "options": ["It ensures the subtree rooted at i becomes a min-heap", "It only affects the left subtree", "It compares the node at i with its children and pushes the largest down recursively", "It uses bubble sort internally"],
+    "answer": "It compares the node at i with its children and pushes the largest down recursively"
+  },
+  {
+    "id": 231,
+    "question": "Which of the following has the highest time complexity?",
+    "options": ["O(n)", "O(n^2)", "O(n!)", "O(n log n)"],
+    "answer": "O(n!)"
+  },
+  {
+    "id": 232,
+    "question": "What does O(1) time complexity mean?",
+    "options": ["Time grows with input", "Constant time, regardless of input size", "Time grows linearly", "Time doubles with input size"],
+    "answer": "Constant time, regardless of input size"
+  },
+  {
+    "id": 233,
+    "question": "Finding the location of the element with a given value is:",
+    "options": ["Traversal", "None of the given", "Search", "Sort"],
+    "answer": "Search"
+  },
+  {
+    "id": 234,
+    "question": "To represent hierarchical relationship between elements, which data structure is suitable?",
+    "options": ["Tree", "All of above", "Deque", "Priority"],
+    "answer": "Tree"
+  },
+  {
+    "id": 235,
+    "question": "Which of the following algorithms solves the unweighted single source shortest path problem?",
+    "options": ["BFS", "Dijkstra's algorithm", "Prim's algorithm", "DFS"],
+    "answer": "BFS"
+  },
+  {
+    "id": 236,
+    "question": "In general, the index of the first element in an array is",
+    "options": ["-1", "2", "0", "1"],
+    "answer": "0"
+  },
+  {
+    "id": 237,
+    "question": "The data structure required to check whether an expression contains balanced parenthesis is?",
+    "options": ["Array", "Queue", "Tree", "Stack"],
+    "answer": "Stack"
+  },
+  {
+    "id": 238,
+    "question": "Which of the following case does not exist in complexity theory",
+    "options": ["Worst case", "Average case", "Best case", "Null case"],
+    "answer": "Null case"
+  },
+  {
+    "id": 239,
+    "question": "Can a tree stored in an array using either one of inorder or post order or pre order traversals be again reformed?",
+    "options": [
+      "No we need one more traversal to form a tree",
+      "Yes by using both inorder and array elements",
+      "No in case of sparse trees",
+      "Yes just traverse through the array and form the tree"
+    ],
+    "answer": "No we need one more traversal to form a tree"
+  },
+  {
+    "id": 240,
+    "question": "During heap sort, after extracting the maximum element, what operation is used to maintain the heap property?",
+    "options": ["BuildHeap", "Bubble Up", "Heapify (or Sift Down)", "Insert"],
+    "answer": "Heapify (or Sift Down)"
+  },
+  {
+    "id": 241,
+    "question": "Which of the following is the correct time complexity of building a max heap from an unsorted array of n elements?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 242,
+    "question": "Can a tree stored in an array using either one of inorder or post order or pre order traversals be again reformed?",
+    "options": ["No in case of sparse trees", "No we need one more traversal to form a tree", "Yes just traverse through the array and form the tree", "Yes by using both inorder and array elements"],
+    "answer": "No we need one more traversal to form a tree"
+  },
+  {
+    "id": 243,
+    "question": "When implementing a hash table with open addressing, what condition can lead to infinite loops during insertion?",
+    "options": ["Load factor above 0.5", "Non-prime modulus in hash function", "Hash function returning same index for all keys", "Use of power of two table sizes"],
+    "answer": "Hash function returning same index for all keys"
+  },
+  {
+    "id": 244,
+    "question": "Which of the following has the highest time complexity?",
+    "options": ["O(n^2)", "O(n!)", "O(n log n)", "O(n)"],
+    "answer": "O(n!)"
+  },
+  {
+    "id": 245,
+    "question": "Which of the following case does not exist in complexity theory",
+    "options": ["Null case", "Best case", "Average case", "Worst case"],
+    "answer": "Null case"
+  },
+  {
+    "id": 246,
+    "question": "Why is Heap Sort not considered a stable sorting algorithm?",
+    "options": ["It uses recursion", "It performs in-place swaps without preserving order", "It has high time complexity", "It requires additional memory"],
+    "answer": "It performs in-place swaps without preserving order"
+  },
+  {
+    "id": 247,
+    "question": "In the Merge Sort algorithm, what causes the space complexity to be O(n)?",
+    "options": ["Use of in-place swaps", "Sorting large elements", "Temporary arrays used during merging", "Recursive function calls"],
+    "answer": "Temporary arrays used during merging"
+  },
+  {
+    "id": 248,
+    "question": "Which of the following statements is TRUE regarding the process of heapifying a subtree rooted at index i in an array?",
+    "options": ["It ensures the subtree rooted at i becomes a min-heap.", "It compares the node at index i to children and pushes the largest down recursively.", "It only affects the left subtree.", "It uses bubble sort internally."],
+    "answer": "It compares the node at index i to children and pushes the largest down recursively."
+  },
+  {
+    "id": 249,
+    "question": "n elements are inserted one by one into an initially empty binary heap. The total running time?",
+    "options": ["There is no answer here", "O(n log n) worst case and O(n log n) average case", "O(n log n) worst case and O(n) average case", "O(n) worst case and O(n) average case"],
+    "answer": "O(n log n) worst case and O(n) average case"
+  },
+  {
+    "id": 250,
+    "question": "Which of the following functions grows fastest?",
+    "options": ["O(log n)", "O(N^2)", "O(N!)", "O(2^N)"],
+    "answer": "O(N!)"
+  },
+  {
+    "id": 251,
+    "question": "What is the advantage of heap sort over quicksort in worst case scenarios?",
+    "options": ["Heap sort is more cache friendly", "Heap sort is faster on average", "Heap sort has a guaranteed O(n log n) performance", "Heap sort is recursive"],
+    "answer": "Heap sort has a guaranteed O(n log n) performance"
+  },
+  {
+    "id": 252,
+    "question": "How do you remove an element from the top of a stack?",
+    "options": ["Dequeue operation", "Delete from array", "Pop operation", "Remove by index"],
+    "answer": "Pop operation"
+  },
+  {
+    "id": 253,
+    "question": "If you run Heap Sort on an array of size n, how many times is the heapify function potentially called in total (worst case)?",
+    "options": ["n log n", "n!", "n", "log n"],
+    "answer": "n log n"
+  },
+  {
+    "id": 254,
+    "question": "Which of the following does the binary heap implement?",
+    "options": ["Binary search tree", "priority queue", "queue", "hash table"],
+    "answer": "priority queue"
+  },
+  {
+    "id": 255,
+    "question": "A recursive algorithm works by solving two half-sized problems recursively, with an additional linear-time overhead. The total running time is most accurately given by",
+    "options": ["O(log n)", "O(n log n)", "O(n)", "There is no answer here"],
+    "answer": "O(n log n)"
+  },
+  {
+    "id": 256,
+    "question": "What is the worst-case time complexity of searching for an element in a hash table with separate chaining, assuming poor hash function and many collisions?",
+    "options": ["O(1)", "O(n)", "O(n log n)", "O(log n)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 257,
+    "question": "Which sorting algorithm has the same average and worst-case time bounds (in log-C) as heap sort?",
+    "options": ["Merge sort", "Selection sort", "Shell sort", "Quick sort"],
+    "answer": "Merge sort"
+  },
+  {
+    "id": 258,
+    "question": "Which of the following algorithms solves the unweighted single source shortest path problem?",
+    "options": ["BFS", "Prim's algorithm", "DFS", "Dijkstra's algorithm"],
+    "answer": "BFS"
+  },
+  {
+    "id": 259,
+    "question": "What does O(1) time complexity mean?",
+    "options": ["Time grows linearly", "Time doubles with input size", "Time grows with input", "Constant time, regardless of input size"],
+    "answer": "Constant time, regardless of input size"
+  },
+  {
+    "id": 260,
+    "question": "In general, the index of the first element in an array is",
+    "options": ["-1", "1", "0", "Random"],
+    "answer": "0"
+  },
+  {
+    "id": 261,
+    "question": "Why is Merge Sort preferred over Quick Sort in internal sorting (e.g., with large datasets on disk)?",
+    "options": ["Merge Sort is faster on average", "Merge Sort uses no extra space", "Merge Sort accesses elements in a sequential manner", "Quick Sort handles external data better"],
+    "answer": "Merge Sort accesses elements in a sequential manner"
+  },
+  {
+    "id": 262,
+    "question": "Which of the following traversals requires more than linear time in the worst case?",
+    "options": ["Inorder", "Postorder", "All of these traversals are linear time", "Level order"],
+    "answer": "All of these traversals are linear time"
+  },
+  {
+    "id": 263,
+    "question": "The time factor when determining the efficiency of algorithm is measured by",
+    "options": ["Counting microseconds", "Counting the kilobytes of algorithm", "Counting the number of statements", "Counting the number of key operations"],
+    "answer": "Counting the number of key operations"
+  },
+  {
+    "id": 264,
+    "question": "In a stack, if a user tries to remove an element from empty stack it is called",
+    "options": ["Simply collection", "Garbage Collection", "Underflow", "Overflow"],
+    "answer": "Underflow"
+  },
+  {
+    "id": 265,
+    "question": "The complexity of linear search algorithm is",
+    "options": ["O(n)", "O(n log n)", "O(log n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 266,
+    "question": "In which of the following traversals is the node processed before the recursive calls to the children complete?",
+    "options": ["Inorder", "Postorder", "Preorder", "Level order"],
+    "answer": "Preorder"
+  },
+  {
+    "id": 267,
+    "question": "Two main measures for the efficiency of an algorithm are",
+    "options": ["Complexity and capacity", "Data and space", "Time and space", "Processor and memory"],
+    "answer": "Time and space"
+  },
+  {
+    "id": 268,
+    "question": "Jobs sent to a printer are generally placed on a",
+    "options": ["queue", "priority queue", "binary search tree", "hash table"],
+    "answer": "queue"
+  },
+  {
+    "id": 269,
+    "question": "Every node in a (min) binary heap",
+    "options": ["Has a smaller left child than right child", "Has 2 children", "Is no larger than its children", "Is no smaller than its children"],
+    "answer": "Is no larger than its children"
+  },
+  {
+    "id": 270,
+    "question": "Finding the location of the element with a given value is:",
+    "options": ["None of the given", "Sort", "Traversal", "Search"],
+    "answer": "Search"
+  },
+  {
+    "id": 271,
+    "question": "How many children does a binary tree have?",
+    "options": ["any number of children", "0 or 1", "0 or 1 or 2", "2"],
+    "answer": "0 or 1 or 2"
+  },
+  {
+    "id": 272,
+    "question": "Which of the following is TRUE about Heap Sort in terms of space complexity and stability?",
+    "options": ["O(n) space and stable", "O(n log n) space and not stable", "O(1) space and stable", "O(1) space and not stable"],
+    "answer": "O(1) space and not stable"
+  },
+  {
+    "id": 273,
+    "question": "During the merge operation in Merge Sort, how many comparisons are required to merge two sorted subarrays of total size n in the worst case?",
+    "options": ["n^2", "n", "1", "log n"],
+    "answer": "n"
+  },
+  {
+    "id": 274,
+    "question": "What is the number of edges present in a complete graph having n vertices?",
+    "options": ["Information given is insufficient", "(n*(n+1))/2", "(n*(n-1))/2", "n"],
+    "answer": "(n*(n-1))/2"
+  },
+  {
+    "id": 275,
+    "question": "If the hash function is poorly designed, which of the following is the most likely result?",
+    "options": ["Reduced space usage", "Faster search times", "Increased hash collisions", "Improved key distribution"],
+    "answer": "Increased hash collisions"
+  },
+  {
+    "id": 276,
+    "question": "The operation of processing each element in the list is known as",
+    "options": ["Traversal", "Sorting", "Merging", "Inserting"],
+    "answer": "Traversal"
+  },
+  {
+    "id": 277,
+    "question": "To represent hierarchical relationship between elements, which data structure is suitable?",
+    "options": ["Deque", "Priority", "Tree", "All of above"],
+    "answer": "Tree"
+  },
+  {
+    "id": 278,
+    "question": "What is the worst-case time complexity of Quick Sort when using the last element as the pivot for an already sorted array?",
+    "options": ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"],
+    "answer": "O(n^2)"
+  },
+  {
+    "id": 279,
+    "question": "Which of the following best describes the space complexity of in-place Quick Sort (excluding recursive stack)?",
+    "options": ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 280,
+    "question": "What is the main drawback of using linked lists for collision resolution in hash tables?",
+    "options": ["Inefficient deletion operation", "Inability to handle duplicate keys", "Poor hashing of integer keys", "Increased memory usage due to pointers"],
+    "answer": "Increased memory usage due to pointers"
+  }
+]
+

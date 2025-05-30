@@ -1,0 +1,916 @@
+[
+  {
+    "id": 101,
+    "question": "How is a circular queue different from a regular queue?",
+    "options": ["Last connects to the first", "Cannot enqueue", "Cannot dequeue", "Queue is circular"],
+    "answer": "Last connects to the first"
+  },
+  {
+    "id": 102,
+    "question": "Which of the following uses the FIFO principle?",
+    "options": ["Stack", "Tree", "Graph", "Queue"],
+    "answer": "Queue"
+  },
+  {
+    "id": 103,
+    "question": "How is a queue different from a stack?",
+    "options": ["Stack is FIFO, queue is LIFO", "Both use the same memory structure", "Stack is LIFO, queue is FIFO", "Stack allows insertion at front, queue at rear"],
+    "answer": "Stack is LIFO, queue is FIFO"
+  },
+  {
+    "id": 104,
+    "question": "Which data structure uses LIFO?",
+    "options": ["Tree", "Heap", "Queue", "Stack"],
+    "answer": "Stack"
+  },
+  {
+    "id": 105,
+    "question": "What's happen if base condition is not defined in recursion?",
+    "options": ["Nothing happens", "None of these", "Stack underflow", "Stack overflow"],
+    "answer": "Stack overflow"
+  },
+  {
+    "id": 106,
+    "question": "What does a Linked List consist of?",
+    "options": ["Pointers to arrays", "Nodes with data and a reference to the next node", "Only data elements", "Arrays with fixed size"],
+    "answer": "Nodes with data and a reference to the next node"
+  },
+  {
+    "id": 107,
+    "question": "How many edges will DFS traverse in a connected graph with V vertices and E edges?",
+    "options": ["V", "V + E", "V - 1", "V - E"],
+    "answer": "V - 1"
+  },
+  {
+    "id": 108,
+    "question": "In DFS, how do you ensure each node is visited only once?",
+    "options": ["Use a stack", "Restart search at each node", "Limit recursion depth", "Track visited nodes using a list or set"],
+    "answer": "Track visited nodes using a list or set"
+  },
+  {
+    "id": 109,
+    "question": "How can you implement a stack?",
+    "options": ["Using arrays & linked lists", "Using arrays or linked lists", "Only using arrays", "Only using graphs"],
+    "answer": "Using arrays or linked lists"
+  },
+  {
+    "id": 110,
+    "question": "What data structure is used intensively in recursive DFS?",
+    "options": ["Stack", "Tree", "Queue", "Array"],
+    "answer": "Stack"
+  },
+  {
+    "id": 111,
+    "question": "What is the output order of Breadth-First Search?",
+    "options": ["Level by level", "Post-order", "Left-to-right and top-to-bottom", "Random order"],
+    "answer": "Level by level"
+  },
+  {
+    "id": 112,
+    "question": "Which of the following time complexities is faster than O(n log n)?",
+    "options": ["O(log n)", "O(n^2)", "O(n!)", "O(2^n)"],
+    "answer": "O(log n)"
+  },
+  {
+    "id": 113,
+    "question": "Which data structure is used in BFS?",
+    "options": ["Queue", "Priority Queue", "Stack", "Hash Map"],
+    "answer": "Queue"
+  },
+  {
+    "id": 114,
+    "question": "What is the time complexity of searching an element in a linked list?",
+    "options": ["O(n log n)", "O(n)", "O(1)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 115,
+    "question": "Which traversal technique uses a queue?",
+    "options": ["Postorder", "Inorder", "BFS", "DFS"],
+    "answer": "BFS"
+  },
+  {
+    "id": 116,
+    "question": "Which of these Big O notations represents exponential time?",
+    "options": ["O(2^n)", "O(n^2)", "O(log n)", "O(n!)"],
+    "answer": "O(2^n)"
+  },
+  {
+    "id": 117,
+    "question": "What is the space complexity of BFS in the worst case?",
+    "options": ["O(n)", "O(1)", "O(n^2)", "O(n * 2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 118,
+    "question": "What is the time complexity of push operation in a stack?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 119,
+    "question": "Which is the best-case time complexity for BFS traversal of a graph?",
+    "options": ["O(E)", "O(V)", "O(V + E)", "O(V * E)"],
+    "answer": "O(V + E)"
+  },
+  {
+    "id": 120,
+    "question": "What is the primary difference between DFS recursive and iterative approach?",
+    "options": ["Recursive uses stack, iterative uses queue", "Iterative cannot visit all nodes", "Recursive uses call stack, iterative uses explicit stack", "Recursive is faster"],
+    "answer": "Recursive uses call stack, iterative uses explicit stack"
+  },
+  {
+    "id": 121,
+    "question": "How do you remove an element from the top of a stack?",
+    "options": ["Dequeue operation", "Pop operation", "Remove by index", "Delete from array"],
+    "answer": "Pop operation"
+  },
+  {
+    "id": 122,
+    "question": "What happens when you dequeue from an empty queue?",
+    "options": ["Queue overflows", "Underflow error", "Data corruption", "Segmentation fault"],
+    "answer": "Underflow error"
+  },
+  {
+    "id": 123,
+    "question": "What does the following notation mean: O(n^2)?",
+    "options": ["Time doubles with input size", "Time grows exponentially", "Time grows quadratically", "Time grows linearly"],
+    "answer": "Time grows quadratically"
+  },
+  {
+    "id": 124,
+    "question": "What is the key advantage of linked lists over arrays?",
+    "options": ["Faster indexing", "Dynamic memory usage", "Constant time search", "Fixed size"],
+    "answer": "Dynamic memory usage"
+  },
+  {
+    "id": 125,
+    "question": "Which of these scenarios leads to O(1) complexity?",
+    "options": ["BFS traversal", "Linked list insertion", "Permutations of n elements", "Binary search"],
+    "answer": "Linked list insertion"
+  },
+  {
+    "id": 126,
+    "question": "In a doubly linked list, how many pointers does each node have?",
+    "options": ["Two", "None", "Three", "Array"],
+    "answer": "Two"
+  },
+  {
+    "id": 127,
+    "question": "Which of these structures is non-linear?",
+    "options": ["Queue", "Stack", "Tree", "Array"],
+    "answer": "Tree"
+  },
+  {
+    "id": 128,
+    "question": "Which operation is not constant time in a singly linked list?",
+    "options": ["Insert at front", "Traverse the list", "Delete from front", "Insert at end"],
+    "answer": "Traverse the list"
+  },
+  {
+    "id": 129,
+    "question": "What does O(1) time complexity mean?",
+    "options": ["Time doubles with input size", "Constant time, independent of input size", "Time grows with input", "Time grows linearly"],
+    "answer": "Constant time, independent of input size"
+  },
+  {
+    "id": 130,
+    "question": "Which of the following can result in stack overflow?",
+    "options": ["Infinite loop", "Using a queue instead of stack", "Not many enqueue operations", "Recursive function without base case"],
+    "answer": "Recursive function without base case"
+  },
+  {
+    "id": 131,
+    "question": "What data structure is most suitable for DFS?",
+    "options": ["Array", "Queue", "Stack", "Heap"],
+    "answer": "Stack"
+  },
+  {
+    "id": 132,
+    "question": "In which situation is DFS preferred over BFS?",
+    "options": ["Traversing level-wise", "Less memory needed", "Searching in wide trees", "Finding shortest path"],
+    "answer": "Less memory needed"
+  },
+  {
+    "id": 133,
+    "question": "What is the time complexity of accessing an element in a singly linked list?",
+    "options": ["O(n log n)", "O(n)", "O(log n)", "O(1)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 134,
+    "question": "What will happen if you use a stack for BFS?",
+    "options": ["Tree traversal improves", "It will perform DFS instead", "Both are same", "Queue becomes unnecessary"],
+    "answer": "It will perform DFS instead"
+  },
+  {
+    "id": 135,
+    "question": "What happens in BFS if you don't mark nodes as visited?",
+    "options": ["Skip all nodes", "Visit nodes repeatedly", "Complete traversal", "Terminate early"],
+    "answer": "Visit nodes repeatedly"
+  },
+  {
+    "id": 136,
+    "question": "In recursion the condition after which the function will stop calling itself is ...",
+    "options": ["Stack overflow", "Base case", "Recursive case", "None of these"],
+    "answer": "Base case"
+  },
+  {
+    "id": 137,
+    "question": "Which of these is not a valid Big O notation?",
+    "options": ["O(n)", "O(n^2)", "O(n log n)", "O(n!)"],
+    "answer": "All are valid"
+  },
+  {
+    "id": 138,
+    "question": "Which operation is fastest in a queue?",
+    "options": ["Deletion from the middle", "Random access", "Deletion from the rear", "Insertion at the end"],
+    "answer": "Insertion at the end"
+  },
+  {
+    "id": 139,
+    "question": "What is the worst-case time complexity of inserting a node at the end of a singly linked list?",
+    "options": ["O(n^2)", "O(n)", "O(log n)", "O(1)"],
+    "answer": "O(n)"
+  },
+{
+    "id": 140,
+    "question": "What is the main advantage of using a doubly linked list over a singly linked list?",
+    "options": ["Faster access", "More memory efficient", "Easier to traverse in both directions", "Less memory usage"],
+    "answer": "Easier to traverse in both directions"
+  },
+  {
+    "id": 141,
+    "question": "Which of the following is true about recursion?",
+    "options": [
+      "The recursive program has less space requirements",
+      "The principal of stack is FIFO",
+      "None of these",
+      "Recursion provides a clean and simple way to write code"
+    ],
+    "answer": "Recursion provides a clean and simple way to write code"
+  },
+  {
+    "id": 142,
+    "question": "What happens when you dequeue from an empty queue?",
+    "options": [
+      "Data corruption",
+      "Queue overflows",
+      "Segmentation fault",
+      "Underflow error"
+    ],
+    "answer": "Underflow error"
+  },
+  {
+    "id": 143,
+    "question": "What will happen if you use a stack for BFS?",
+    "options": [
+      "Queue becomes unnecessary",
+      "Tree traversal improves",
+      "It will perform DFS instead",
+      "BFS works faster"
+    ],
+    "answer": "It will perform DFS instead"
+  },
+  {
+    "id": 144,
+    "question": "How can you implement a stack?",
+    "options": [
+      "Using only a linked list",
+      "Using graphs",
+      "Only using arrays",
+      "Using arrays or linked lists"
+    ],
+    "answer": "Using arrays or linked lists"
+  },
+  {
+    "id": 145,
+    "question": "What is the time complexity of searching an element in a linked list?",
+    "options": [
+      "O(1)",
+      "O(n^2)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "id": 146,
+    "question": "Which data structure uses LIFO?",
+    "options": [
+      "Heap",
+      "Queue",
+      "Tree",
+      "Stack"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "id": 147,
+    "question": "What is the best-case time for searching in a linked list?",
+    "options": [
+      "O(n^2)",
+      "O(1)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "answer": "O(1)"
+  },
+  {
+    "id": 148,
+    "question": "What is the primary difference between DFS recursive and iterative approaches?",
+    "options": [
+      "Iterative cannot visit all nodes",
+      "Recursive uses stack, iterative uses queue",
+      "Recursive is faster",
+      "Recursive uses call stack, iterative uses explicit stack"
+    ],
+    "answer": "Recursive uses call stack, iterative uses explicit stack"
+  },
+  {
+    "id": 149,
+    "question": "What does a Linked List consist of?",
+    "options": [
+      "Pointers to arrays",
+      "Nodes with data and a reference to the next node",
+      "Only data elements",
+      "Arrays with fixed size"
+    ],
+    "answer": "Nodes with data and a reference to the next node"
+  },
+  {
+    "id": 150,
+    "question": "What is the purpose of the 'rear' and 'front' pointers in a queue?",
+    "options": [
+      "Mark the rand insertion and deletion points",
+      "Track minimum and maximum",
+      "Store array size",
+      "Track top and bottom"
+    ],
+    "answer": "Mark the rand insertion and deletion points"
+  },
+  {
+    "id": 151,
+    "question": "Which of the following uses the FIFO principle?",
+    "options": [
+      "Queue",
+      "Tree",
+      "Graph",
+      "Stack"
+    ],
+    "answer": "Queue"
+  },
+  {
+    "id": 152,
+    "question": "What is the first step in DFS?",
+    "options": [
+      "Go as deep as possible",
+      "Mark all nodes as visited",
+      "Visit neighbors first",
+      "Traverse by levels"
+    ],
+    "answer": "Go as deep as possible"
+  },
+  {
+    "id": 153,
+    "question": "In DFS, what happens if you revisit a visited node without checking?",
+    "options": [
+      "Improved speed",
+      "Infinite loop",
+      "Stack underflow",
+      "Early termination"
+    ],
+    "answer": "Infinite loop"
+  },
+  {
+    "id": 154,
+    "question": "Which operation is not constant time in a singly linked list?",
+    "options": [
+      "Insert at end",
+      "Traverse the list",
+      "Insert at front",
+      "Delete from front"
+    ],
+    "answer": "Traverse the list"
+  },
+  {
+    "id": 155,
+    "question": "Which condition must be true for a queue to be empty?",
+    "options": [
+      "front > rear",
+      "rear == front",
+      "rear == size",
+      "front == NULL"
+    ],
+    "answer": "rear == front"
+  },
+  {
+    "id": 156,
+    "question": "What is the output order of Breadth-First Search?",
+    "options": [
+      "Level by level",
+      "Post-order",
+      "Left-to-right and top-to-bottom",
+      "Random order"
+    ],
+    "answer": "Level by level"
+  },
+  {
+    "id": 157,
+    "question": "What data structure is used internally in recursive DFS?",
+    "options": [
+      "Array",
+      "Stack",
+      "Queue",
+      "Tree"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "id": 158,
+    "question": "How is a circular queue different from a regular queue?",
+    "options": [
+      "Last connects to the first",
+      "Cannot dequeue",
+      "Cannot enqueue",
+      "Queue is infinite"
+    ],
+    "answer": "Last connects to the first"
+  },
+  {
+    "id": 159,
+    "question": "What's happen if base condition is not defined in recursion?",
+    "options": [
+      "Stack underflow",
+      "Stack overflow",
+      "None of these",
+      "Nothing happens"
+    ],
+    "answer": "Stack overflow"
+  },
+  {
+    "id": 160,
+    "question": "In a BFS traversal, what is the order of node visits?",
+    "options": [
+      "Random",
+      "Depth first",
+      "Level by level",
+      "Last-in-first-out"
+    ],
+    "answer": "Level by level"
+  },
+  {
+    "id": 161,
+    "question": "Which of the following is true for a stack?",
+    "options": [
+      "You can delete from the middle",
+      "You can insert at any position",
+      "You can only access the top element",
+      "You can access the bottom element"
+    ],
+    "answer": "You can only access the top element"
+  },
+  {
+    "id": 162,
+    "question": "What does the term \"enqueue\" refer to?",
+    "options": [
+      "Removing from stack",
+      "Adding to stack",
+      "Adding to queue",
+      "Removing from queue"
+    ],
+    "answer": "Adding to queue"
+  },
+  {
+    "id": 163,
+    "question": "Which of these Big O notations represents exponential time?",
+    "options": [
+      "O(n^2)",
+      "O(log n)",
+      "O(n)",
+      "O(2^n)"
+    ],
+    "answer": "O(2^n)"
+  },
+  {
+    "id": 164,
+    "question": "If a stack is implemented using a singly linked list, where is the push operation performed?",
+    "options": [
+      "Middle of the list",
+      "Random position",
+      "Beginning of the list",
+      "End of the list"
+    ],
+    "answer": "Beginning of the list"
+  },
+  {
+    "id": 165,
+    "question": "What does O(1) time complexity mean?",
+    "options": [
+      "Time grows with input",
+      "Constant time, regardless of input size",
+      "Time doubles with input size",
+      "Time grows linearly"
+    ],
+    "answer": "Constant time, regardless of input size"
+  },
+  {
+    "id": 166,
+    "question": "What is the worst-case time complexity of DFS on a graph with V vertices and E edges?",
+    "options": [
+      "O(V + E)",
+      "O(V - E)",
+      "O(V)",
+      "O(E)"
+    ],
+    "answer": "O(V + E)"
+  },
+  {
+    "id": 167,
+    "question": "In a doubly linked list, how many pointers does each node have?",
+    "options": [
+      "Three",
+      "One",
+      "Two",
+      "None"
+    ],
+    "answer": "Two"
+  },
+  {
+    "id": 168,
+    "question": "How is memory managed in a linked list?",
+    "options": [
+      "Continuous memory blocks",
+      "Fixed memory blocks",
+      "Dynamic memory allocation",
+      "Static memory allocation"
+    ],
+    "answer": "Dynamic memory allocation"
+  },
+  {
+    "id": 169,
+    "question": "What is the space complexity of BFS in the worst case?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(n^2)",
+      "O(2^n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "id": 170,
+    "question": "In which situation is DFS preferred over BFS?",
+    "options": [
+      "Traversing level-wise",
+      "Finding shortest path",
+      "Searching in wide trees",
+      "Less memory available"
+    ],
+    "answer": "Less memory available"
+  },
+  {
+    "id": 171,
+    "question": "Which of the following time complexities is faster than O(n log n)?",
+    "options": [
+      "O(2^n)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "id": 172,
+    "question": "How is a queue different from a stack?",
+    "options": [
+      "Both use the same memory structure",
+      "Stack allows insertion at front, queue at rear",
+      "Stack is LIFO, queue is FIFO",
+      "Stack is FIFO, queue is LIFO"
+    ],
+    "answer": "Stack is LIFO, queue is FIFO"
+  },
+  {
+    "id": 173,
+    "question": "Which operation is fastest in a queue?",
+    "options": [
+      "Random access",
+      "Insertion at the end",
+      "Deletion from the rear",
+      "Deletion from the middle"
+    ],
+    "answer": "Insertion at the end"
+  },
+  {
+    "id": 174,
+    "question": "Which of the following can result in stack overflow?",
+    "options": [
+      "Using a queue instead of stack",
+      "Too many enqueue operations",
+      "Infinite loop",
+      "Recursive function without base case"
+    ],
+    "answer": "Recursive function without base case"
+  },
+  {
+    "id": 175,
+    "question": "What is the key advantage of linked lists over arrays?",
+    "options": [
+      "Dynamic memory usage",
+      "Constant time search",
+      "Faster indexing",
+      "Fixed size"
+    ],
+    "answer": "Dynamic memory usage"
+  },
+  {
+    "id": 176,
+    "question": "Which data structure combination can be used to implement a deque?",
+    "options": [
+      "One array and one hash map",
+      "One stack and one queue",
+      "Two queues",
+      "Two stacks"
+    ],
+    "answer": "Two stacks"
+  },
+  {
+    "id": 177,
+    "question": "What is the space complexity of an iterative DFS?",
+    "options": [
+      "O(n^2)",
+      "O(n)",
+      "O(1)",
+      "O(log n)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "id": 178,
+    "question": "Which of the following graphs will make DFS and BFS visit nodes in the same order?",
+    "options": [
+      "Complete graph",
+      "Directed graph",
+      "Graph with a single path",
+      "Tree"
+    ],
+    "answer": "Graph with a single path"
+  },
+  {
+    "id": 179,
+    "question": "Which is the best-case time complexity for BFS traversal of a graph?",
+    "options": [
+      "O(log V)",
+      "O(E)",
+      "O(V + E)",
+      "O(V)"
+    ],
+    "answer": "O(V)"
+  },
+  {
+    "id": 180,
+    "question": "Which data structure is used in BFS?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Hash Map",
+      "Priority Queue"
+    ],
+    "answer": "Queue"
+  },
+{
+    "id": 181,
+    "question": "Which data structure is best for implementing an undo feature in applications?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": "Stack"
+  },
+  {
+    "id": 182,
+    "question": "What happens if you try to pop from an empty stack?",
+    "options": ["Stack overflow", "Stack underflow", "No effect", "Queue overflow"],
+    "answer": "Stack underflow"
+  },
+  {
+    "id": 183,
+    "question": "Which operation is not efficient in a singly linked list?",
+    "options": ["Insert at front", "Delete from front", "Insert at end", "Traverse the list"],
+    "answer": "Insert at end"
+  },
+  {
+    "id": 184,
+    "question": "Which data structure allows insertion and deletion at both ends?",
+    "options": ["Stack", "Queue", "Deque", "Heap"],
+    "answer": "Deque"
+  },
+  {
+    "id": 185,
+    "question": "What is the time complexity of accessing the last element in a singly linked list?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 186,
+    "question": "Which data structure is used for level order traversal of a tree?",
+    "options": ["Stack", "Queue", "Array", "Heap"],
+    "answer": "Queue"
+  },
+  {
+    "id": 187,
+    "question": "Which of the following is not a linear data structure?",
+    "options": ["Stack", "Queue", "Tree", "Array"],
+    "answer": "Tree"
+  },
+  {
+    "id": 188,
+    "question": "What is the main disadvantage of using arrays over linked lists?",
+    "options": ["Fixed size", "Slow access", "Difficult to traverse", "High memory usage"],
+    "answer": "Fixed size"
+  },
+  {
+    "id": 189,
+    "question": "Which data structure is most suitable for implementing a priority queue?",
+    "options": ["Stack", "Heap", "Array", "Linked list"],
+    "answer": "Heap"
+  },
+  {
+    "id": 190,
+    "question": "What is the time complexity of enqueue operation in a queue implemented with a linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 191,
+    "question": "Which data structure is best for breadth-first search?",
+    "options": ["Stack", "Queue", "Array", "Tree"],
+    "answer": "Queue"
+  },
+  {
+    "id": 192,
+    "question": "What is the main advantage of a circular queue over a linear queue?",
+    "options": ["Easier implementation", "No wasted space", "Faster access", "Simpler code"],
+    "answer": "No wasted space"
+  },
+  {
+    "id": 193,
+    "question": "Which operation is not possible in a stack?",
+    "options": ["Push", "Pop", "Enqueue", "Peek"],
+    "answer": "Enqueue"
+  },
+  {
+    "id": 194,
+    "question": "What is the time complexity of searching for an element in an unsorted array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 195,
+    "question": "Which data structure is best for implementing a call stack in programming languages?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": "Stack"
+  },
+  {
+    "id": 196,
+    "question": "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 197,
+    "question": "Which data structure is used for recursive function calls?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": "Stack"
+  },
+  {
+    "id": 198,
+    "question": "Which data structure is best for implementing a queue with constant time operations?",
+    "options": ["Array", "Singly linked list", "Doubly linked list", "Stack"],
+    "answer": "Doubly linked list"
+  },
+  {
+    "id": 199,
+    "question": "What is the main advantage of using a doubly linked list?",
+    "options": ["Less memory usage", "Easier to traverse in both directions", "Faster access", "Simpler implementation"],
+    "answer": "Easier to traverse in both directions"
+  },
+  {
+    "id": 300,
+    "question": "Which data structure is used to implement BFS traversal?",
+    "options": ["Stack", "Queue", "Array", "Heap"],
+    "answer": "Queue"
+  },
+  {
+    "id": 301,
+    "question": "What is the time complexity of deleting the first element in a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 302,
+    "question": "Which operation is not allowed in a queue?",
+    "options": ["Enqueue", "Dequeue", "Push", "Peek"],
+    "answer": "Push"
+  },
+  {
+    "id": 303,
+    "question": "Which data structure is best for implementing a browser's back button?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": "Stack"
+  },
+  {
+    "id": 304,
+    "question": "What is the time complexity of searching for an element in a sorted array using binary search?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(log n)"
+  },
+  {
+    "id": 305,
+    "question": "Which data structure is best for implementing a double-ended queue (deque)?",
+    "options": ["Stack", "Queue", "Doubly linked list", "Heap"],
+    "answer": "Doubly linked list"
+  },
+  {
+    "id": 306,
+    "question": "What is the time complexity of inserting an element at the end of a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 307,
+    "question": "Which data structure is best for implementing a priority queue?",
+    "options": ["Stack", "Heap", "Array", "Queue"],
+    "answer": "Heap"
+  },
+  {
+    "id": 308,
+    "question": "Which operation is not constant time in a doubly linked list?",
+    "options": ["Insert at front", "Delete from end", "Access by index", "Insert at end"],
+    "answer": "Access by index"
+  },
+  {
+    "id": 309,
+    "question": "Which data structure is best for implementing a queue with O(1) enqueue and dequeue?",
+    "options": ["Array", "Singly linked list", "Doubly linked list", "Stack"],
+    "answer": "Doubly linked list"
+  },
+  {
+    "id": 310,
+    "question": "What is the time complexity of push operation in a stack implemented with an array?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(1)"
+  },
+  {
+    "id": 311,
+    "question": "Which data structure is best for implementing a queue with a fixed size?",
+    "options": ["Array", "Stack", "Heap", "Tree"],
+    "answer": "Array"
+  },
+  {
+    "id": 312,
+    "question": "Which operation is not possible in a queue?",
+    "options": ["Enqueue", "Dequeue", "Push", "Peek"],
+    "answer": "Push"
+  },
+  {
+    "id": 313,
+    "question": "Which data structure is best for implementing a stack with constant time operations?",
+    "options": ["Array", "Queue", "Heap", "Tree"],
+    "answer": "Array"
+  },
+  {
+    "id": 314,
+    "question": "What is the time complexity of deleting the last element in a singly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 315,
+    "question": "Which data structure is best for implementing a queue with O(1) operations at both ends?",
+    "options": ["Doubly linked list", "Array", "Stack", "Heap"],
+    "answer": "Doubly linked list"
+  },
+  {
+    "id": 316,
+    "question": "Which operation is not constant time in a stack?",
+    "options": ["Push", "Pop", "Peek", "Access by index"],
+    "answer": "Access by index"
+  },
+  {
+    "id": 317,
+    "question": "Which data structure is best for implementing a queue with O(1) enqueue and dequeue?",
+    "options": ["Doubly linked list", "Array", "Stack", "Heap"],
+    "answer": "Doubly linked list"
+  },
+  {
+    "id": 318,
+    "question": "What is the time complexity of searching for an element in a doubly linked list?",
+    "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    "answer": "O(n)"
+  },
+  {
+    "id": 319,
+    "question": "Which data structure is best for implementing a stack with O(1) push and pop?",
+    "options": ["Array", "Queue", "Heap", "Tree"],
+    "answer": "Array"
+  }
+]
