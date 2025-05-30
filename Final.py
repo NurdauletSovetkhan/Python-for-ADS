@@ -81,11 +81,6 @@ with tab2:
     st.title("📝 Past Quizzes")
 
     # Hide sidebar for cleaner look in this tab
-    st.markdown("""
-        <style>
-            [data-testid="stSidebar"] {display: none;}
-        </style>
-    """, unsafe_allow_html=True)
 
     # Load quiz questions from JSON files
     with open("mid.json") as f:
@@ -113,12 +108,6 @@ with tab2:
 
 # ----------------- TAB 3: Take a Quiz -----------------
 with tab3:
-    # Hide sidebar for cleaner look in this tab
-    st.markdown("""
-        <style>
-            [data-testid="stSidebar"] {display: none;}
-        </style>
-    """, unsafe_allow_html=True)
 
     # Load quiz questions from JSON files
     with open("mid.json") as f:
