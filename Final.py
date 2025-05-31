@@ -116,6 +116,14 @@ with tab3:
         end_questions = json.load(f)
 
     st.title("🎮 Take a Quiz")
+    
+    # Reset all session state if requested
+    if st.button("🔄 Try Again (Reset All)"):
+        for key in ["submitted", "quiz_answers", "quiz", "shuffled_questions", "num_questions_prev"]:
+            if key in st.session_state:
+                del st.session_state[key]
+        st.experimental_rerun()  # полностью перезапускает таб
+
 
     # Select quiz source and number of questions
     col1, col2 = st.columns(2)
