@@ -122,7 +122,7 @@ with tab3:
         for key in ["submitted", "quiz_answers", "quiz", "shuffled_questions", "num_questions_prev"]:
             if key in st.session_state:
                 del st.session_state[key]
-        st.experimental_rerun()  # полностью перезапускает таб
+        st.rerun()  # полностью перезапускает таб
 
 
     # Select quiz source and number of questions
